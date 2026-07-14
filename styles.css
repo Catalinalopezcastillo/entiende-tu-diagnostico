@@ -124,7 +124,9 @@ ul { list-style: none; padding: 0; }
   border-bottom: 1px solid var(--c-sand);
 }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: var(--s-2); min-height: 68px; }
-.brand { display: inline-flex; flex-direction: column; text-decoration: none; line-height: 1; }
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; line-height: 1; }
+.brand__mark { flex-shrink: 0; }
+.brand__text { display: inline-flex; flex-direction: column; }
 .brand__name { font-family: var(--f-serif); font-size: 1.15rem; font-weight: 600; color: var(--c-ink); }
 .brand__name em { font-style: normal; color: var(--c-terracotta-deep); }
 .brand__tag { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-ink-soft); margin-top: 3px; }
