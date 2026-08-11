@@ -108,13 +108,14 @@ ul { list-style: none; padding: 0; }
 .btn--primary { background: var(--c-brand-deep); color: #fff; box-shadow: var(--shadow-sm); }
 .btn--primary:hover { background: #45575b; }
 .btn--ghost { background: transparent; border-color: currentColor; color: var(--c-brand-deep); }
-.section--dark .btn--ghost { color: #fff; }
+.section--dark .btn--ghost, .hero .btn--ghost { color: #fff; }
 .btn--ghost:hover { background: rgba(255, 255, 255, 0.16); }
 .btn--whatsapp { background: var(--c-brand-deep); color: #fff; box-shadow: var(--shadow-sm); }
 .btn--whatsapp:hover { background: #45575b; }
 .btn--mail { background: var(--c-terracotta); color: #3a3b3f; box-shadow: var(--shadow-sm); }
 .btn--mail:hover { background: #d3a595; }
 .btn__icon { width: 1.2em; height: 1.2em; }
+.btn--sm { padding: 0.55em 1.2em; font-size: 0.88rem; }
 
 /* ---------- 5. Header / navegación ---------- */
 .site-header {
@@ -229,6 +230,49 @@ ul { list-style: none; padding: 0; }
 .resource { background: #fff; border: 1px solid var(--c-sand); border-radius: var(--radius); padding: var(--s-3); box-shadow: var(--shadow-sm); }
 .resource__topic { font-family: var(--f-serif); font-size: 1.12rem; color: var(--c-brand-deep); margin-bottom: 0.3em; }
 .resource__text { font-size: 0.92rem; color: var(--c-ink-soft); }
+
+/* ---------- 12b. Módulo destacado (guías pagas por tipo de cáncer) ---------- */
+.module-featured { background: #fff; border: 2px solid var(--c-terracotta-deep); border-radius: var(--radius); padding: var(--s-5); box-shadow: var(--shadow); }
+.module-featured__top { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-2); flex-wrap: wrap; }
+.module-featured__title { font-size: clamp(1.5rem, 3vw, 2.1rem); margin: 0; }
+.module-featured__lang { font-size: 0.85rem; color: var(--c-ink-soft); font-weight: 500; white-space: nowrap; }
+.module-featured__text { color: var(--c-ink-soft); max-width: 62ch; margin-top: var(--s-2); }
+
+.module-featured__guides {
+  margin-top: var(--s-4);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--s-3);
+}
+.module-featured__guide-row {
+  display: flex; flex-direction: column; gap: var(--s-2);
+  background: var(--c-cream); border: 1px solid var(--c-sand); border-radius: var(--radius-sm);
+  padding: var(--s-3); box-shadow: var(--shadow-sm);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.module-featured__guide-row:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.module-featured__guide-info { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--s-2); }
+.module-featured__guide-cover {
+  width: 100%; max-width: 190px; height: auto; aspect-ratio: 480 / 644;
+  object-fit: cover; object-position: top; border-radius: 10px;
+  border: 1px solid var(--c-sand); box-shadow: var(--shadow-sm); background: #fff;
+  margin: 0 auto;
+}
+.module-featured__guide-copy { width: 100%; }
+.module-featured__guide-name { font-weight: 700; color: var(--c-brand-deep); font-size: 1.05rem; }
+.module-featured__guide-desc { font-size: 0.9rem; color: var(--c-ink-soft); margin-top: 4px; }
+.module-featured__guide-buy {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--s-2);
+  margin-top: auto; padding-top: var(--s-2); border-top: 1px solid var(--c-sand); width: 100%;
+}
+.module-featured__guide-price { font-family: var(--f-serif); font-size: 1.15rem; color: var(--c-ink); white-space: nowrap; }
+.module-featured__note { font-size: 0.85rem; color: var(--c-ink-soft); margin-top: var(--s-3); font-style: italic; }
+
+/* Módulos por tipo de cáncer — próximamente */
+.module-card { background: #fff; border: 1px solid var(--c-sand); border-radius: var(--radius); padding: var(--s-4); box-shadow: var(--shadow-sm); opacity: 0.9; }
+.module-card__topic { font-family: var(--f-serif); font-size: 1.15rem; color: var(--c-ink); margin-bottom: 0.3em; }
+.module-card__text { font-size: 0.92rem; color: var(--c-ink-soft); }
+.module-card__tag { display: inline-block; margin-top: 0.7em; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-terracotta-deep); font-weight: 600; }
 
 /* ---------- 13. Bloque de contacto ---------- */
 .contact-cta { display: flex; flex-wrap: wrap; gap: var(--s-2); justify-content: center; margin-top: var(--s-4); }
