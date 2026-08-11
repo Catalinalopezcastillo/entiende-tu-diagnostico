@@ -251,11 +251,16 @@ ul { list-style: none; padding: 0; }
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .module-featured__guide-row:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+/* Cada guía con un fondo distinto, para que la portada (de fondo claro) resalte sobre la tarjeta */
+.module-featured__guide-row:nth-child(4n+1) { background: var(--c-blue-soft); }
+.module-featured__guide-row:nth-child(4n+2) { background: #f4ddd2; }
+.module-featured__guide-row:nth-child(4n+3) { background: #dfe9e2; }
+.module-featured__guide-row:nth-child(4n+4) { background: #f7ecd2; }
 .module-featured__guide-info { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--s-2); }
 .module-featured__guide-cover {
   width: 100%; max-width: 190px; height: auto; aspect-ratio: 480 / 644;
   object-fit: cover; object-position: top; border-radius: 10px;
-  border: 1px solid var(--c-sand); box-shadow: var(--shadow-sm); background: #fff;
+  border: 1px solid rgba(63, 65, 69, 0.12); box-shadow: 0 6px 18px rgba(63, 65, 69, 0.16); background: #fff;
   margin: 0 auto;
 }
 .module-featured__guide-copy { width: 100%; }
