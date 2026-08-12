@@ -108,7 +108,7 @@ ul { list-style: none; padding: 0; }
 .btn--primary { background: var(--c-brand-deep); color: #fff; box-shadow: var(--shadow-sm); }
 .btn--primary:hover { background: #45575b; }
 .btn--ghost { background: transparent; border-color: currentColor; color: var(--c-brand-deep); }
-.section--dark .btn--ghost, .hero .btn--ghost { color: #fff; }
+.section--dark .btn--ghost { color: #fff; }
 .btn--ghost:hover { background: rgba(255, 255, 255, 0.16); }
 .btn--whatsapp { background: var(--c-brand-deep); color: #fff; box-shadow: var(--shadow-sm); }
 .btn--whatsapp:hover { background: #45575b; }
@@ -237,39 +237,14 @@ ul { list-style: none; padding: 0; }
 .module-featured__title { font-size: clamp(1.5rem, 3vw, 2.1rem); margin: 0; }
 .module-featured__lang { font-size: 0.85rem; color: var(--c-ink-soft); font-weight: 500; white-space: nowrap; }
 .module-featured__text { color: var(--c-ink-soft); max-width: 62ch; margin-top: var(--s-2); }
-
-.module-featured__guides {
-  margin-top: var(--s-4);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: var(--s-3);
-}
-.module-featured__guide-row {
-  display: flex; flex-direction: column; gap: var(--s-2);
-  background: var(--c-cream); border: 1px solid var(--c-sand); border-radius: var(--radius-sm);
-  padding: var(--s-3); box-shadow: var(--shadow-sm);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.module-featured__guide-row:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-/* Cada guía con un fondo distinto, para que la portada (de fondo claro) resalte sobre la tarjeta */
-.module-featured__guide-row:nth-child(4n+1) { background: var(--c-blue-soft); }
-.module-featured__guide-row:nth-child(4n+2) { background: #f4ddd2; }
-.module-featured__guide-row:nth-child(4n+3) { background: #dfe9e2; }
-.module-featured__guide-row:nth-child(4n+4) { background: #f7ecd2; }
-.module-featured__guide-info { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--s-2); }
-.module-featured__guide-cover {
-  width: 100%; max-width: 190px; height: auto; aspect-ratio: 480 / 644;
-  object-fit: cover; object-position: top; border-radius: 10px;
-  border: 1px solid rgba(63, 65, 69, 0.12); box-shadow: 0 6px 18px rgba(63, 65, 69, 0.16); background: #fff;
-  margin: 0 auto;
-}
-.module-featured__guide-copy { width: 100%; }
-.module-featured__guide-name { font-weight: 700; color: var(--c-brand-deep); font-size: 1.05rem; }
-.module-featured__guide-desc { font-size: 0.9rem; color: var(--c-ink-soft); margin-top: 4px; }
-.module-featured__guide-buy {
-  display: flex; align-items: center; justify-content: space-between; gap: var(--s-2);
-  margin-top: auto; padding-top: var(--s-2); border-top: 1px solid var(--c-sand); width: 100%;
-}
+.module-featured__guides { margin-top: var(--s-4); border-top: 1px solid var(--c-sand); }
+.module-featured__guide-row { display: flex; align-items: center; justify-content: space-between; gap: var(--s-3); flex-wrap: wrap; padding: 16px 0; border-bottom: 1px solid var(--c-sand); }
+.module-featured__guide-cover { flex: none; width: 64px; height: 91px; object-fit: cover; object-position: top; border-radius: 8px; border: 1px solid var(--c-sand); box-shadow: var(--shadow-sm); background: var(--c-cream); }
+.module-featured__guide-info { flex: 1 1 260px; display: flex; align-items: center; gap: var(--s-3); }
+.module-featured__guide-copy { flex: 1 1 220px; }
+.module-featured__guide-name { font-weight: 600; color: var(--c-brand-deep); font-size: 1rem; }
+.module-featured__guide-desc { font-size: 0.88rem; color: var(--c-ink-soft); margin-top: 2px; }
+.module-featured__guide-buy { display: flex; align-items: center; gap: var(--s-2); }
 .module-featured__guide-price { font-family: var(--f-serif); font-size: 1.15rem; color: var(--c-ink); white-space: nowrap; }
 .module-featured__note { font-size: 0.85rem; color: var(--c-ink-soft); margin-top: var(--s-3); font-style: italic; }
 
@@ -322,6 +297,7 @@ ul { list-style: none; padding: 0; }
   .section { padding-block: var(--s-6); }
   .footer__grid { grid-template-columns: 1fr; }
   .founder__portrait { max-width: 320px; }
+  .module-featured__guide-info { flex-wrap: wrap; }
 }
 
 @media (prefers-reduced-motion: reduce) {
