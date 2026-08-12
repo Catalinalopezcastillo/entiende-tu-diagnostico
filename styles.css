@@ -108,7 +108,7 @@ ul { list-style: none; padding: 0; }
 .btn--primary { background: var(--c-brand-deep); color: #fff; box-shadow: var(--shadow-sm); }
 .btn--primary:hover { background: #45575b; }
 .btn--ghost { background: transparent; border-color: currentColor; color: var(--c-brand-deep); }
-.section--dark .btn--ghost { color: #fff; }
+.section--dark .btn--ghost, .hero .btn--ghost { color: #fff; }
 .btn--ghost:hover { background: rgba(255, 255, 255, 0.16); }
 .btn--whatsapp { background: var(--c-brand-deep); color: #fff; box-shadow: var(--shadow-sm); }
 .btn--whatsapp:hover { background: #45575b; }
