@@ -33,7 +33,7 @@ Luego abre <http://localhost:8123> en el navegador. (Ctrl+C para detenerlo.)
 - **WhatsApp / correo / LinkedIn:** están repetidos en las 4 páginas. Para cambiarlos, busca y
   reemplaza en todos los `.html`:
   - WhatsApp: `573115520337`
-  - Correo: `catalinalopezcastillo1@gmail.com`
+  - Correo: `entiendetudiagnostico@gmail.com`
   - LinkedIn: `catalina-lopez-md`
 - **Colores y tipografía:** al inicio de `styles.css`, sección "Tokens de diseño".
 - **Textos:** directamente en cada archivo `.html`.
